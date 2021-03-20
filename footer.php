@@ -153,6 +153,13 @@ $(document).ready(function(){
   });
 });
 </script>
+<!-- testimonial feed --->
+<script type="text/javascript"> 
+      $(document).ready(function showElement(){
+          $('#test').html('Here is the testimonial!')
+      })
+  
+</script>
 
 <!--bxslider-->
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/jquery.bxslider.min.js"></script>
