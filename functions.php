@@ -138,7 +138,7 @@ function twentyfifteen_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
-	
+
 }
 add_action( 'widgets_init', 'twentyfifteen_widgets_init' );
 
@@ -234,7 +234,16 @@ function twentyfifteen_scripts() {
 	) );
 }
 add_action( 'wp_enqueue_scripts', 'twentyfifteen_scripts' );
+function twentyfifteen_testimonials_shortcode() {
 
+	return '<h1>Testimonials will show up here</h1>';
+
+
+}
+function register_shortcodes(){
+   add_shortcode('testimonials', 'twentyfifteen_testimonials_shortcode');
+}
+add_action( 'init', 'testimonials');
 /**
  * Add featured image as background image to post navigation elements.
  *
@@ -357,10 +366,6 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 add_action('woocommerce_before_main_content', 'my_theme_wrapper_start', 10);
 add_action('woocommerce_after_main_content', 'my_theme_wrapper_end', 10);
 
-function testimonial_shortcode () {
-	return '<h1> Testimonials </h1>'
-}
-add_shortcode('show_testimonials','testimonial_shortcode');
 
 
 function my_theme_wrapper_start() {
