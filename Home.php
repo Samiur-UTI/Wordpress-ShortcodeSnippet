@@ -45,7 +45,7 @@ get_header();
           <div class="new-way-img">
 		  	<div class="kdsx">
 			<!--h3>Testimonials</h3-->
-	        <div class="col-md-4 gdf"><?php [testimonials] ?></div>
+	        <div class="col-md-4 gdf" id ='test'><?php [testimonials] ?></div>
 	        </div>
           	<div class="card-main">
 			<ul class="bxslider">
